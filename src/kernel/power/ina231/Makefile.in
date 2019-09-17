@@ -1,0 +1,18 @@
+SHELL=/bin/sh
+
+all: ina231.o
+
+POWER_RAPL=power/ina231
+POWER=power/
+
+
+include ../../../alea_make.def
+SUBDIRS_INCLUDE=-I../../$(POWER) -I../..
+
+%.o : %.c
+	$(CC) $(CFLAGS) $(SUBDIRS_INCLUDE) -c $<
+
+
+clean:
+	rm Makefile
+	rm -f *.o *.so

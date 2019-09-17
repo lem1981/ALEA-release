@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if grep -q "ARM" /proc/cpuinfo
+then 
+   objdump -d  $1 > $1\_diss
+   alea_build_stat_arch.py $@ arm
+else
+   objdump -d -M intel $1 > $1\_diss
+   alea_build_stat_arch.py $@ intel
+fi

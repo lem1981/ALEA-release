@@ -1,0 +1,33 @@
+SHELL=/bin/sh
+PROGRAM=alea
+
+OBJECTS=alea.o \
+        alea_common.o \
+        alea_ptrace.o \
+        alea_set_options.o \
+        alea_threads.o
+
+INSTALL_DIR=@prefix@/bin
+include ../alea_make.def
+
+
+alea_prof : $(OBJECTS)
+	for dir in $(SUBDIRS); do \
+	$(MAKE) -C $$dir; \
+	done
+	$(CC) $(CFLAGS) $(SUBDIRS_INCLUDE) $(OBJECTS) $(LIB_OBJECTS) -o alea_prof -lm -lpthread
+	sudo setcap  cap_sys_rawio,cap_sys_ptrace=eip alea_prof
+%.o : %.c
+	$(CC) $(CFLAGS) $(SUBDIRS_INCLUDE) -c $<
+
+
+all: alea_prof
+
+clean:
+	for dir in $(SUBDIRS); do \
+	$(MAKE) -C $$dir clean;\
+	done
+	rm -f alea_prof *.o *.so
+
+install: 
+	mv alea_prof $(INSTALL_DIR)/.

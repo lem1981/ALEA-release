@@ -1,0 +1,12 @@
+
+MAKE=make
+CC=gcc
+CFLAGS=-pedantic -std=c99 -Wall -D_GNU_SOURCE -lm -lpthread 
+ARCH_ARM=sample/arm
+ALEA_SAMPLE=sample/
+POWER_ARM=power/ina231
+POWER=power/
+
+SUBDIRS=$(ARCH_ARM) $(POWER_ARM) $(ALEA_SAMPLE)
+SUBDIRS_INCLUDE=-I$(ARCH_ARM) -I$(POWER_ARM) 
+LIB_OBJECTS=$(ALEA_SAMPLE)/alea_sample.o $(ARCH_ARM)/alea_arm.o $(POWER_ARM)/ina231.o

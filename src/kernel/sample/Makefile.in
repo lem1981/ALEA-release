@@ -1,0 +1,17 @@
+SHELL=/bin/sh
+
+all: alea_sample.o
+
+POWER_RAPL=power/rapl
+POWER=power/
+
+
+include ../../alea_make.def
+SUBDIRS_INCLUDE=-I../$(POWER) -I../
+
+%.o : %.c
+	$(CC) $(CFLAGS) $(SUBDIRS_INCLUDE) -c $<
+
+
+clean:
+	rm -f *.o *.so

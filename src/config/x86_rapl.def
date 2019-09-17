@@ -1,0 +1,12 @@
+
+MAKE=make
+CC=gcc
+CFLAGS=-pedantic -std=c99 -Wall -D_GNU_SOURCE -lm -lpthread 
+ARCH_X86=sample/x86
+ALEA_SAMPLE=sample/
+POWER_RAPL=power/rapl
+POWER=power/
+
+SUBDIRS=$(ARCH_X86) $(POWER_RAPL) $(ALEA_SAMPLE)
+SUBDIRS_INCLUDE=-I$(ARCH_X86) -I$(POWER) 
+LIB_OBJECTS=sample/alea_sample.o sample/x86/alea_x86.o power/rapl/rapl.o

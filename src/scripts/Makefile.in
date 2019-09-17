@@ -1,0 +1,18 @@
+SHELL=/bin/sh
+
+INSTALL_DIR=@prefix@/bin
+
+SUBDIRS=kernel \
+        scripts
+
+all:
+
+install:
+#	mkdir -p ../../bin
+	cp alea_bb_info.py $(INSTALL_DIR)/alea_bb_info
+	chmod +x $(INSTALL_DIR)/alea_bb_info
+	cp alea_build_stat.scr $(INSTALL_DIR)/alea_build_stat
+	chmod +x $(INSTALL_DIR)/alea_build_stat
+	cp alea_build_stat_arch.py $(INSTALL_DIR)/alea_build_stat_arch.py
+
+clean:
