@@ -2,6 +2,10 @@ ALEA profiler v.0.1.
 --------------------------------------------------
 ALEA is a cross-platform energy profiling tool.
 
+The detailed description of the tool:
+http://homepages.inf.ed.ac.uk/hleather/publications/2017_alea_taco.pdf
+https://arxiv.org/abs/1504.00825
+
 For problem reports and suggestions on the implementation,
 please contact:
 
