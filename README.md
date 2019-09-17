@@ -53,9 +53,9 @@ File "alea_build_stat" should be run in the same directory where "alea_prof" was
 ------------------------------------------
 How to interpret the results of profiling?
 ------------------------------------------
-
->Basic blocks                                              Samples    Time,Sec       Energy,J          Power,W     
->-----------------------------------------------------------------------------------------------------------------
+'''
+Basic blocks                                              Samples    Time,Sec       Energy,J          Power,W     
+-----------------------------------------------------------------------------------------------------------------
 sys                                                       229          2.85          224.11          78.55
 bb96 bb96 bb96 bb96 bb96 bb96 bb96 bb96                   167          2.08          397.93          191.26
 bb102 bb102 bb102 bb102 bb102 bb102 bb102 bb102           137          1.71          302.21          177.06
@@ -77,7 +77,7 @@ Time 8.322158
 
 In this table bb96 corresponds to the basic block with id 96 of a profiled application, sys corresponds to a basic block
 from a dynamic library called by the application.
-
+'''
 -------------------------------------------------------
 What does a combination of "bb96 bb96 bb96 bb96 bb96 bb96 bb96 bb96" mean?
 -------------------------------------------------------
