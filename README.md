@@ -88,7 +88,7 @@ How to get instructions of a basic block and associate it with source code?
 ---------------------------------------------------------------------------
 For example, if this information should be retrieved for bb121 of  backprop application then the
 following command should be executed:
-
+```
 alea_bb_info 121 backprop
 
 Results:
@@ -113,4 +113,4 @@ Basic block body:
   40106f:	00 
   401070:	f3 0f 11 45 00          movss  DWORD PTR [rbp+0x0],xmm0
   401075:	7d d9                	jge    401050 <bpnn_randomize_weights+0x30>
-
+```
