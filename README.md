@@ -31,12 +31,6 @@ per CPU the following variable should be exported:
 export ALEA_CPU_NUM=4
 export ALEA_CORE_NUM=12
 
-----------------
-How to download?
-----------------
-Download sources(https://hpdc-gitlab.eeecs.qub.ac.uk/lmukhanov/alea-profiler.git):
-  git clone https://hpdc-gitlab.eeecs.qub.ac.uk/lmukhanov/alea-profiler.git
-
 -------------
 How to build?
 -------------
@@ -61,9 +55,13 @@ How to interpret the results of profiling?
 ------------------------------------------
 
 Basic blocks                                              Samples    Time,Sec       Energy,J          Power,W     
+
 -----------------------------------------------------------------------------------------------------------------
+
 sys                                                       229          2.85          224.11          78.55
+
 bb96 bb96 bb96 bb96 bb96 bb96 bb96 bb96                   167          2.08          397.93          191.26
+
 bb102 bb102 bb102 bb102 bb102 bb102 bb102 bb102           137          1.71          302.21          177.06
 bb121                                                     61           0.76          64.19          84.46
 sys sys sys sys sys sys sys sys                           37           0.46          43.93          95.30
